@@ -5,10 +5,9 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed:"${actual} !==  ${expected}`);
   }
 };
-const head = function(ary){
-  return ary[0]
+const tail = function(ary){
+  return ary.slice(0)
 }
 
-
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result, ["Lighthouse", "Labs"]);
