@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(listOne, listTwo) {
+const eqArrays = function (listOne, listTwo) {
   if (listOne.length === listTwo.length) {
     for (let i = 0; i < listOne.length; i++) {
       if (listOne[i] !== listTwo[i]) {
@@ -18,4 +18,6 @@ const eqArrays = function(listOne, listTwo) {
     return false;
   }
 };
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+
+module.exports = eqArrays
+
