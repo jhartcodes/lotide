@@ -18,6 +18,14 @@ const eqArrays = function (listOne, listTwo) {
     return false;
   }
 };
+
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+const abc = { a: "1", b: "2", c: "3" };
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+const cd2 = { c: "1", d: ["2", 3, 4] };
+
 const eqObjects = function (object1, object2) {
   if ((Object.keys(object1)).length !== (Object.keys(object2)).length) {
     return false
@@ -34,19 +42,16 @@ const eqObjects = function (object1, object2) {
   } return true
 }
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-const abc = { a: "1", b: "2", c: "3" };
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-const cd2 = { c: "1", d: ["2", 3, 4] };
+const assertObjectsEqual = function (actual, expected) {
+  const inspect = require('util').inspect;
 
-assertEqual(eqObjects(cd, dc), true); // => true
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
 
-assertEqual(eqObjects(cd, cd2), false); // => false
+};
+assertObjectsEqual(cd, dc); // => true
 
-// assertEqual(eqObjects(ab, ba), true); // => true
-// assertEqual(eqObjects(ab, abc), false); // => false
-
-
-
+assertObjectsEqual(cd, cd2); // => false

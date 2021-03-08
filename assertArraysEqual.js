@@ -1,4 +1,4 @@
-const eqArrays = function(listOne, listTwo) {
+const eqArrays = function (listOne, listTwo) {
   if (listOne.length === listTwo.length) {
     for (let i = 0; i < listOne.length; i++) {
       if (listOne[i] !== listTwo[i]) {
@@ -11,11 +11,13 @@ const eqArrays = function(listOne, listTwo) {
   }
 };
 
-const assertArraysEqual = function(arrOne, arrTwo) {
+const assertArraysEqual = function (arrOne, arrTwo) {
   if (eqArrays(arrOne, arrTwo)) {
     console.log(`✅✅✅ Assertion Passed: ${arrOne} === ${arrTwo}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${arrOne} != ${arrTwo}`);
   }
 };
-assertArraysEqual([1,2,3],[1,2,3]);
+
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
