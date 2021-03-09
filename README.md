@@ -31,4 +31,4 @@ The following functions are currently implemented:
 * `middle(arr)`: takes an array and returns the middle element of the array. If the array has an even number of elements, the two middle-most elements are returned.
 * `eqArrays(arr1,arr2)`: takes two arrays and returns true if their length and contents are equal.
 * `assertEqual(str1,str2)`:takes two strings and usees template literals to compare teh values
-* `assertArraysEqual(arr1,arr2)`:taks two arrays and compares the values if the length and contents are the same.
+* `assertArraysEqual(arr1,arr2)`:takes two arrays and compares the values if the length and contents are the same.

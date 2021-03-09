@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@joelhart89/lotdide.",
   "version": "1.0.0",
   "description": "Lotide",
   "main": "assertArraysEqual.js",
@@ -23,7 +23,5 @@
     "chai": "^4.3.3",
     "mocha": "^8.3.1"
   },
-  "dependencies": {
-    "my-package": "0.0.0"
-  }
+  "dependencies": {}
 }
